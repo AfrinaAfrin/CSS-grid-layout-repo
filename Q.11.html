@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Grid Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      grid-template-rows: repeat(2, 100px); /* 2 rows of 100px height */
+      gap: 10px;
+      width: 80%;
+    }
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .item:nth-child(1) { background-color: #ff6f61; }
+    .item:nth-child(2) { background-color: #6fa8dc; }
+    .item:nth-child(3) { background-color: #93c47d; }
+    .item:nth-child(4) { background-color: #f6b26b; }
+    .item:nth-child(5) { background-color: #8e7cc3; }
+    .item:nth-child(6) { background-color: #ffd966; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+</body>
+</html>
